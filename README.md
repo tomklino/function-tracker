@@ -6,13 +6,13 @@ function-tracker tracks functions that return an array or a Promise that resolve
 * `element_join` when an element that did not exist in the previous return value appears in the current one
 * `element_left` when an element that existed in the previous return value does not appear in the current one
 
-# Installation
+## Installation
 
 ```js
 npm i --save function tracker
 ```
 
-# Example usage
+## Example usage
 
 ```js
 const trackerFactory = require('function-tracker')
@@ -33,7 +33,7 @@ usersTracker.call() //returns [{username: "tom"}, {username: "maya"}]
 //event element_left will be called with [{username: "ben"}]
 ```
 
-# Advanced usage
+## Advanced usage
 
 Let's assume we have a function `getActiveUsers` that returns the following format:
 
