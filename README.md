@@ -19,7 +19,7 @@ const trackerFactory = require('function-tracker')
 
 let usersTracker = trackerFactory({
   watchFunction: () => {
-    //some function the fetches something and returns an array (or a Promise that resolves to an array)
+    //some function that fetches something and returns an array (or a Promise that resolves to an array)
   }
 })
 .on('element_join', (new_users) => { console.log("there are new users:", new_users) })
