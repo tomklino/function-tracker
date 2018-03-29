@@ -9,7 +9,7 @@ function-tracker tracks functions that return an array or a Promise that resolve
 ## Installation
 
 ```js
-npm i --save function tracker
+npm i --save function-tracker
 ```
 
 ## Example usage
