@@ -37,7 +37,7 @@ usersTracker.call() //returns [{username: "tom"}, {username: "maya"}]
 
 Let's assume we have a function `getActiveUsers` that returns the following format:
 
-```json
+```js
 [{username: "tom", active_since: 15234523711}, {username: "ben", active_since:  15234522612}]
 ```
 
