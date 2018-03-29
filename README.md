@@ -43,7 +43,7 @@ Let's assume we have a function `getActiveUsers` that returns the following form
 
 Obviously the next time we call that function, all of the elements will be different becuase of the `active_since` field, even though the users tom and ben had not left or joined.
 
-We can set the way `function-tracker` compares item from the last call to the current one like so:
+We can set the way `function-tracker` compares item from the last call to the current one by passing the logic we want to use to the `setComparator` method, like so:
 
 ```js
 let usersTracker = trackerFactory({
