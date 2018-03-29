@@ -1,6 +1,6 @@
 {
   "name": "function-tracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tracks the value returned by a function across multiple calls so events can be attached to changes",
   "repository": {
     "type": "git",
