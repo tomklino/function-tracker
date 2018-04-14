@@ -1,11 +1,14 @@
 const chai = require('chai');
+const chaiAsPromised = require('chai-as-promised');
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 
 const trackerFactory = require('../index');
 
-chai.should();
 chai.use(sinonChai);
+chai.use(chaiAsPromised);
+const expect = chai.expect;
+chai.should();
 
 function makeMockFunction(...values) {
   let i = 0;
@@ -228,5 +231,17 @@ describe("full example with elements joining and leaving, initializing with chai
       elementLeaveMock.should.have.been.calledWith([{id: 2, name: "G"}]);
       done();
     })
+  })
+})
+
+describe("tests for bad input and rejection by the watched function", () => {
+  it("handles a rejection by the watched function", () => {
+    let tracker = trackerFactory({
+      watchFunction: () => {
+        return Promise.reject(new Error("random error"))
+      }
+    })
+
+    return tracker.call().should.be.fulfilled;
   })
 })
